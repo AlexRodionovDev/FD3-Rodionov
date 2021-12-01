@@ -1,0 +1,15 @@
+.MyShop{
+    border: solid 1px blue;
+    border-collapse: collapse;
+}
+
+.MyShop .TableName{
+    font-size: 30px;
+    font-weight: 800;
+    padding: 5px 0;
+}
+
+.MyShop .TableItem .Product .tdItem{
+    border: solid 1px blue;
+    padding: 5px 10px;
+}
