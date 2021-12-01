@@ -5,3 +5,5 @@ const products =[
     {name: 'fan', price: 70, photo: 'https://www.777555.by/content/thumb/items/img_2006524_big_1_1024.jpg', inStock: 100},
     {name: 'mixer', price: 100, photo: 'https://imarket.by/upload/simpleimage_cache/aa00b6e87209b7c2a5f74d7cfaa4662e_1200x800_w0_100.jpg', inStock: 150},
 ]
+
+
