@@ -1,0 +1,15 @@
+.Filter .InputText{
+    width: 219px;
+}
+
+.Filter .StringContainer{
+    height: 100px;
+    width: 300px;
+    overflow: Auto;
+    border: solid black 1px;
+    margin-top: 10px;
+}
+
+.Filter .StringContainer .String{
+    margin: 5px 5px;
+}

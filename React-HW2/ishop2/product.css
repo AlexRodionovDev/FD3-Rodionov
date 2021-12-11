@@ -1,0 +1,8 @@
+.ShopBlock .TableBody .Product .tdItem{
+    border: solid 1px blue;
+    padding: 5px 10px;
+}
+
+.ShopBlock .BrownColor{
+    background-color: rgb(236, 78, 78);
+}

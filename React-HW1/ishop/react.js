@@ -13,7 +13,7 @@ let MyShop = React.createClass({
 
     displayName: 'MyShop',
 
-      render: function(){
+    render: function(){
 
         let tableItem = [];
         this.props.products.forEach(elem => {
@@ -29,7 +29,7 @@ let MyShop = React.createClass({
         });
  
       return React.DOM.table( {className:'MyShop'}, 
-        React.DOM.caption({className: 'TableName'},this.props.name),
+        React.DOM.caption( {className: 'TableName'},this.props.name),
         React.DOM.tbody( {className: 'TableItem'}, tableItem )
         );
     },
