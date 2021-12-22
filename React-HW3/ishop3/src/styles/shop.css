@@ -1,0 +1,38 @@
+.ShopBlock{
+    border: solid 1px blue;
+    border-collapse: collapse;
+}
+
+.ShopBlock .TableName{
+    font-size: 30px;
+    font-weight: 800;
+    padding: 5px 0;
+}
+
+.ShopBlock .TableBody .ProductName .ColName{
+    border: solid 1px blue;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.ShopBlock .TableBody .ProductName .NameCol{
+    width: 90px;
+}
+
+.ShopBlock .TableBody .ProductName .PriceCol{
+    width: 60px;
+}
+
+.ShopBlock .TableBody .ProductName .PhotoCol{
+    width: 550px;
+}
+
+.ShopBlock .TableBody .ProductName .InStockCol{
+    width: 100px;
+}
+
+.ShopBlock .TableBody .ProductName .DelCol{
+    width: 110px;
+}
+

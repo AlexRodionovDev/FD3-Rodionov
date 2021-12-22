@@ -1,0 +1,35 @@
+.CardContainer{
+    width: 400px;
+}
+
+.CardContainer p{
+    margin: 0;
+}
+
+.CardContainer .InpContainer .InpName{
+    position: absolute;
+}
+
+.CardContainer .InpContainer input{
+    margin-left: 65px;
+    width: 227px;
+}
+
+.CardContainer .InpContainer .Error{
+    color: red;
+    margin-left: 5px;
+}
+
+.CardContainer .BtnContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 65px;
+}
+
+.CardContainer .BtnContainer button{
+    margin-top: 5px;
+}
+
+.CardContainer .Display-none{
+    display: none;
+}
