@@ -53,7 +53,7 @@ class CardBlock extends React.Component {
             this.setState( {stQuantityValid: true}, this.validationForm );
         }
         this.changeValue(e);
-     }
+    }
 
     
     changeValue = (e) => {
