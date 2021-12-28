@@ -16,7 +16,7 @@
             "price": 700,
             "photo": "https://www.millionpodarkov.ru/incoming_img/pleer.ru/9203547.jpg",
             "inStock": 100,
-            "BtnEdit": "Edit",
+            "btnEdit": "Edit",
             "btnDel": "Delete"
         },
         {
@@ -25,7 +25,7 @@
             "price": 300,
             "photo": "https://microless.com/cdn/products/d98a338fc1ea731d545043ca8d89a174-hi.jpg",
             "inStock": 200,
-            "BtnEdit": "Edit",
+            "btnEdit": "Edit",
             "btnDel": "Delete"
         },
         {
@@ -34,7 +34,7 @@
             "price": 1000,
             "photo": "https://cookhouse.by/upload/iblock/398/398e85757f0b780758e90f5f2d90fbbe.jpeg",
             "inStock": 50,
-            "BtnEdit": "Edit",
+            "btnEdit": "Edit",
             "btnDel": "Delete"
         },
         {
@@ -43,7 +43,7 @@
             "price": 70,
             "photo": "https://www.777555.by/content/thumb/items/img_2006524_big_1_1024.jpg",
             "inStock": 100,
-            "BtnEdit": "Edit",
+            "btnEdit": "Edit",
             "btnDel": "Delete"
         },
         {   "name": "mixer",
@@ -51,7 +51,7 @@
             "price": 100,
             "photo": "https://julliom.by/images/content/33/334165/3.jpeg",
             "inStock": 150,
-            "BtnEdit": "Edit",
+            "btnEdit": "Edit",
             "btnDel": "Delete"
         }
     ]

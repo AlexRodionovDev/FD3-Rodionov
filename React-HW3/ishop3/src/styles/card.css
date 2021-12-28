@@ -1,5 +1,5 @@
 .CardContainer{
-    width: 400px;
+    width: 420px;
 }
 
 .CardContainer p{
@@ -12,7 +12,7 @@
 
 .CardContainer .InpContainer input{
     margin-left: 65px;
-    width: 227px;
+    width: 250px;
 }
 
 .CardContainer .InpContainer .Error{
@@ -23,7 +23,7 @@
 .CardContainer .BtnContainer{
     display: flex;
     justify-content: space-around;
-    margin-left: 65px;
+    margin-left: -35px;
 }
 
 .CardContainer .BtnContainer button{
