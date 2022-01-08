@@ -9,21 +9,15 @@ class AccountBlock extends React.Component {
         stDataString: this.props.dataString,
     }
 
-
     render() {
-        let arr = this.state.stDataString.split(' ').join(''); //'первый<br>второй<br/>третий<br/>последний'
-        let arr2 = arr.replace(/<br>/ig, '<br/>'); //'первый<br/>второй<br/>третий<br/>последний'
-        let arrBr = arr2.match(/<br\/>/g); // ['<br/>', '<br/>', '<br/>']
-        let arrWords = arr2.split('<br/>'); //['первый', 'второй', 'третий', 'последний']
-        let resultArr = []; //['первый', '<br/>', 'второй', '<br/>', 'третий', '<br/>', 'последний']
-
+        let arrWords = this.state.stDataString.split(/<br\s*?\/?>/g); 
+        let resultArr = [];
 
         for(let i = 0; i < arrWords.length; i++){
-            if(arrWords[i]){
-                resultArr.push(arrWords[i]);
-            }
-            if(arrBr[i]){
-                resultArr.push(<br/>);
+            resultArr.push(<span key= {[i]}>{arrWords[i]}</span>);
+
+            if(i < arrWords.length - 1){
+                resultArr.push(<br key= {i+'br'}/>);
             }
         }
         
