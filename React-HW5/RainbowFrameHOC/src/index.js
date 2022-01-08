@@ -8,7 +8,7 @@ let colors=['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
 let text = "Hello!";
 
 ReactDOM.render(
-  <ColorBlock colors={colors}>{text}</ColorBlock>
+  <ColorBlock class='ColorBlock' colors={colors}>{text}</ColorBlock>
   ,document.getElementById('app') 
 )
 

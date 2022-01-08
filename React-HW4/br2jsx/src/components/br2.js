@@ -14,7 +14,8 @@ class AccountBlock extends React.Component {
         let resultArr = [];
 
         for(let i = 0; i < arrWords.length; i++){
-            resultArr.push(<span key= {[i]}>{arrWords[i]}</span>);
+            // resultArr.push(<span key= {[i]}>{arrWords[i]}</span>);
+            resultArr.push(arrWords[i]);
 
             if(i < arrWords.length - 1){
                 resultArr.push(<br key= {i+'br'}/>);
