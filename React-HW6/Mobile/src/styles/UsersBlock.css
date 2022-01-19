@@ -1,0 +1,32 @@
+.UsersBlock {
+    border-collapse: collapse;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.UsersBlock .colNames {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.UsersBlock .colName {
+    padding: 0 10px 0 10px;
+}
+
+.UsersBlock td {
+    text-align: center;
+    border-collapse: collapse;
+    border: solid 1px rgb(0, 0, 0);  
+}   
+
+.UsersBlock .colNames, .cardName {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.UsersBlock .tdStatus {
+    background-color: greenyellow;
+}
+
+.UsersBlock .redBackground {
+    background-color: red;
+}

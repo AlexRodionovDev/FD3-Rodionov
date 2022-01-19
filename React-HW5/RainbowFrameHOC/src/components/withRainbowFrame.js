@@ -31,5 +31,7 @@ let withRainbowFrame = colors => Component => props => {
         return frames;
     };
 
+    withRainbowFrame.displayName = 'HeyHey'
+
     
 export {withRainbowFrame};withRainbowFrame

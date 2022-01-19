@@ -1,0 +1,51 @@
+{
+    "storeName": "Ishop",
+    "columnName": {
+        "code": 0,
+        "surname": "Фамилия",
+        "name": "Имя",
+        "patronymic": "Отчество",
+        "balance": "Баланс",
+        "status": "Статус",
+        "edit": "Редактировать",
+        "delete": "Удалить"
+    },
+
+    "usersArr":[
+        {
+            "code": 1,
+            "surname": "Алексеев",
+            "name": "Алексей",
+            "patronymic": "Алексеевич",
+            "balance": "1000"
+        },
+        {
+            "code": 2,
+            "surname": "Сергеев",
+            "name": "Сергей",
+            "patronymic": "Сергеевич",
+            "balance": "-200"
+        },
+        {
+            "code": 3,
+            "surname": "Викторов",
+            "name": "Виктор",
+            "patronymic": "Викторович",
+            "balance": "500"
+        },
+        {
+            "code": 4,
+            "surname": "Иванов",
+            "name": "Иван",
+            "patronymic": "Иванович",
+            "balance": "800"
+        },
+        {   
+            "code": 5,
+            "surname": "Петров",
+            "name": "Петр",
+            "patronymic": "Петрович",
+            "balance": "-500"
+        }
+    ]
+}

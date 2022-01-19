@@ -1,0 +1,9 @@
+.EditUsersBlock span {
+    position: absolute;
+
+}
+
+.EditUsersBlock input {
+    margin-left: 80px;
+    width: 200px;
+}
