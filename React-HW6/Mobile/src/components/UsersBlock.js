@@ -43,7 +43,7 @@ class UsersBlock extends React.PureComponent {
       this.setState({mode: 'blocked'}, this.setUserStatus);
    }
 
-   userDel = (e) => { // 2 РАЗА СРАБАТЫВАЕТ РЕНДЕР?!
+   userDel = (e) => {
       let users = [...this.state.usersArr];
       
       users.forEach((elem, i) => {
@@ -51,14 +51,14 @@ class UsersBlock extends React.PureComponent {
             users.splice(i,1);
          }
       });
-      this.setState( {usersArr: users},this.render );
+      this.setState( {usersArr: users} );
    }
 
    editUserInfo = (e) => {
       
       this.state.usersArr.forEach((elem) => {
          if(elem.code == e.target.parentElement.parentElement.id) {
-            this.setState( {selectEditUser: elem}) ;
+            this.setState( {selectEditUser: elem}) ;//возможно нужно использовать спред 2.20 6-е видео
             btnClickEvents.emit('btnEditClicked', elem);
          }
       });
@@ -109,8 +109,9 @@ class UsersBlock extends React.PureComponent {
 
 
    render() {
-
       console.log('рендер UserBlock');
+      // console.log('рендер UserBlock id=' + this.state.usersArr.code);
+
       let columnName = 
          <tr key={this.props.colName.code} id={this.props.colName.code} className='colNames'>
             <td className='colName colNameSurname'>{this.props.colName.surname}</td>
@@ -121,7 +122,6 @@ class UsersBlock extends React.PureComponent {
             <td className='colName colNameEdit'>{this.props.colName.edit}</td>
             <td className='colName colNameDelete'>{this.props.colName.delete}</td>
          </tr>
-
 
       let allUsers = this.state.usersArr;
       let activeUsers = this.state.usersArr.filter(elem => elem.balance > 0);

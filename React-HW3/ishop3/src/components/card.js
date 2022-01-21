@@ -218,7 +218,7 @@ class CardBlock extends React.Component {
                 </div>
                 <div className='InpContainer'>
                     <span className='InpName'>Price:</span>
-                    <input 
+                    <input чё
                     key= {this.props.selectedProduct ? this.props.selectedProduct.code : null}
                     defaultValue= {this.props.selectedProduct ? this.props.selectedProduct.price : null}
                     onChange={this.validationPrice}/>

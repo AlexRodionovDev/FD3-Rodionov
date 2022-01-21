@@ -80,6 +80,7 @@ class EditUserBlock extends React.PureComponent {
 
    render() {
       console.log('рендер EditUsersBlock');
+      
       let editUsersBlock = '';
          editUsersBlock =
             <div className="EditUsersBlock" 
@@ -114,8 +115,6 @@ class EditUserBlock extends React.PureComponent {
          <div>
             {editUsersBlock}
          </div>
-   
-         
       )
    }
 }
