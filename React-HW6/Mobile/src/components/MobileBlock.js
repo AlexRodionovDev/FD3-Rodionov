@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ControlButtons from '../components/ControlButtons';
 import MobileCompanies from '../components/MobileCompanies';
 import UsersBlock from '../components/UsersBlock';
-import EditUserBlock from '../components/editUsersBlock';
+import EditUserBlock from './EditUsersBlock';
 
 
 

@@ -7,16 +7,16 @@ import '../styles/ControlButtons.css';
 
 class ControlButtons extends React.PureComponent {
 
-  btnAllClicked = (e) => {
+  btnAllClicked = () => {
     btnClickEvents.emit('btnAllClicked');
   }
 
-  btnActiveClicked = (e) => {
+  btnActiveClicked = () => {
     btnClickEvents.emit('btnActiveClicked');
   }
 
-  btnBlockedClicked = (e) => {
-    btnClickEvents.emit('btnBlockedClicked')
+  btnBlockedClicked = () => {
+    btnClickEvents.emit('btnBlockedClicked');
   }
 
   render() {

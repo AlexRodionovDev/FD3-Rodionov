@@ -20,7 +20,7 @@ class EditUserBlock extends React.PureComponent {
    }
 
    componentDidMount = () => {
-      btnClickEvents.addListener('btnEditClicked', this.setUserInfo);
+      btnClickEvents.addListener('btnEditClicked2', this.setUserInfo);
       btnClickEvents.addListener('btnNewUserClicked', this.addNewUser);
    }
 
@@ -29,7 +29,6 @@ class EditUserBlock extends React.PureComponent {
       btnClickEvents.removeListener('btnNewUserClicked', this.addNewUser);
    }
 
-   
 
    setUserInfo = (selectEditUser) => {
       this.setState( {selectEditUser: selectEditUser}, this.setModeEdit );

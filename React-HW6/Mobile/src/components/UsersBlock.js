@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/UsersBlock.css';
+import MobileClient from '../components/MobileClient ';
 import {btnClickEvents} from './events';
+
 
 
 
@@ -17,18 +19,22 @@ class UsersBlock extends React.PureComponent {
       btnClickEvents.addListener('btnAllClicked', this.all);
       btnClickEvents.addListener('btnActiveClicked', this.active);
       btnClickEvents.addListener('btnBlockedClicked', this.blocked);
+      btnClickEvents.addListener('btnEditClicked', this.editUserInfo);
       btnClickEvents.addListener('btnSaveEditClicked', this.saveEditing);
       btnClickEvents.addListener('btnSaveNewUserClicked', this.saveNewUser);
       btnClickEvents.addListener('btnCancelClicked', this.btnCancelClicked);
+      btnClickEvents.addListener('btnDelClicked', this.userDel);
    }
 
    componentWillUnmount = () => {
-      btnClickEvents.removeListener('btnAllClicked', this.all);
-      btnClickEvents.removeListener('btnActiveClicked', this.active);
-      btnClickEvents.removeListener('btnBlockedClicked', this.blocked);
-      btnClickEvents.removeListener('btnSaveEditClicked', this.saveEditing);
-      btnClickEvents.removeListener('btnSaveNewUserClicked', this.saveNewUser);
-      btnClickEvents.removeListener('btnCancelClicked', this.btnCancelClicked);
+      btnClickEvents.removeListener('btnAllClicked');
+      btnClickEvents.removeListener('btnActiveClicked');
+      btnClickEvents.removeListener('btnBlockedClicked');
+      btnClickEvents.removeListener('btnEditClicked');
+      btnClickEvents.removeListener('btnSaveEditClicked');
+      btnClickEvents.removeListener('btnSaveNewUserClicked');
+      btnClickEvents.removeListener('btnCancelClicked');
+      btnClickEvents.removeListener('btnDelClicked');
    }
 
    all = () => {
@@ -43,10 +49,11 @@ class UsersBlock extends React.PureComponent {
       this.setState({mode: 'blocked'}, this.setUserStatus);
    }
 
+
    userDel = (e) => {
-      let users = [...this.state.usersArr];
-      
-      users.forEach((elem, i) => {
+      let users = this.state.usersArr;
+
+      this.state.usersArr.forEach((elem, i) => {
          if(elem.code == e.target.parentElement.parentElement.id) {
             users.splice(i,1);
          }
@@ -54,19 +61,19 @@ class UsersBlock extends React.PureComponent {
       this.setState( {usersArr: users} );
    }
 
+
    editUserInfo = (e) => {
-      
       this.state.usersArr.forEach((elem) => {
-         if(elem.code == e.target.parentElement.parentElement.id) {
-            this.setState( {selectEditUser: elem}) ;//возможно нужно использовать спред 2.20 6-е видео
-            btnClickEvents.emit('btnEditClicked', elem);
+         if(elem.code == e.parentElement.parentElement.id) {
+            this.setState( {selectEditUser: elem}) ;
+            btnClickEvents.emit('btnEditClicked2', elem);
          }
       });
       this.setState( {cardMode: 'edit'} );
    }
 
    saveNewUser = (newUserData) => {
-      let savedData = [...this.state.usersArr];
+      let savedData = this.state.usersArr;
       let maxCode = 0;
 
       newUserData.code = savedData.forEach((item, i) => {
@@ -78,15 +85,16 @@ class UsersBlock extends React.PureComponent {
       savedData.push(newUserData);
 
       this.setState( {usersArr: savedData} );
-      }
+   }
       
 
    saveEditing =(editData) => {
-      let savedData = [...this.state.usersArr];
+      let savedData = this.state.usersArr;
 
       this.state.usersArr.forEach((elem, i) => {
          if(this.state.cardMode === 'edit'){
             if(elem.code === this.state.selectEditUser.code){
+
                 savedData.splice(i,1,editData);
                 this.setState( {usersArr: savedData});
             }
@@ -98,7 +106,7 @@ class UsersBlock extends React.PureComponent {
 
 
    btnCancelClicked = () => {
-      this.setState( {cardMode: ''} );;
+      this.setState( {cardMode: ''} );
    }
 
 
@@ -110,7 +118,6 @@ class UsersBlock extends React.PureComponent {
 
    render() {
       console.log('рендер UserBlock');
-      // console.log('рендер UserBlock id=' + this.state.usersArr.code);
 
       let columnName = 
          <tr key={this.props.colName.code} id={this.props.colName.code} className='colNames'>
@@ -141,18 +148,9 @@ class UsersBlock extends React.PureComponent {
 
       let usersArrJsx = [];
       currentUsers.forEach(elem => {
-            let users = 
-            <tr key={elem.code} id={elem.code} >
-               <td className='tdSurname'>{elem.surname}</td>
-               <td className='tdName'>{elem.name}</td>
-               <td className='tdPatronymic'>{elem.patronymic}</td>
-               <td className='tdBalance'>{elem.balance}</td>
-               <td className={elem.balance > 0 ? 'tdStatus' : 'tdStatus redBackground'}>
-                  {elem.balance > 0 ? 'active' : 'blocked'}
-               </td>
-               <td className='tdEdit'><button onClick={this.editUserInfo}>Редактировать</button></td>
-               <td className='tdDelete'><button onClick={this.userDel}>Удалить</button></td>
-            </tr>
+            let users = <MobileClient key={elem.code}
+                        clientInfo = {elem}
+                        usersArr = {this.state.usersArr}/>
             usersArrJsx.push(users);
          });
 
