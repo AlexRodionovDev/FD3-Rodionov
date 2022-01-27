@@ -51,7 +51,7 @@ class UsersBlock extends React.PureComponent {
 
 
    userDel = (e) => {
-      let users = this.state.usersArr;
+      let users = [...this.state.usersArr];
 
       this.state.usersArr.forEach((elem, i) => {
          if(elem.code == e.target.parentElement.parentElement.id) {
@@ -148,11 +148,11 @@ class UsersBlock extends React.PureComponent {
 
       let usersArrJsx = [];
       currentUsers.forEach(elem => {
-            let users = <MobileClient key={elem.code}
-                        clientInfo = {elem}
-                        usersArr = {this.state.usersArr}/>
-            usersArrJsx.push(users);
-         });
+         let users = <MobileClient key={elem.code}
+                     clientInfo = {elem}
+                     /* usersArr = {this.state.usersArr} *//>
+         usersArrJsx.push(users);
+      });
 
       return(
          <div>
